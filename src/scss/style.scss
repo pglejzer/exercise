@@ -11,21 +11,18 @@
 body,
 html {
     font-family: 'Eater', 'cursive';
+    background-attachment: fixed;
     background-image: linear-gradient(to left top, #94e9dd, #a4eafa, #c7e9ff, #e6e8ff, #f7ecf8);
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
 }
 
 .text {
-    position: relative;
+    text-align: center;
     min-height: 30rem;
     height: auto;
     font-size: 3em;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
     letter-spacing: 0.2em;
     animation: myMoveTo 1.1s;
     &__p,
@@ -44,182 +41,83 @@ html {
         border-radius: 10px;
         background-image: linear-gradient(to right bottom, #2ed8b2, #00c7cd, #00b3e4, #009aed, #1e7ce1);
         background-repeat: none;
+        animation: opacc 2s ease-in-out;
     }
-    .fas {
-        transform: rotate(-135deg);
-        @include bg-image-gradient-blue;
-        background-image: linear-gradient(to right top, #2ed8b2, #00bcc9, #009ccd, #317ab9, #615691);
-        animation: fly-rocket 7s, rotate-rocket 5s 1;
-        font-size: 0.8em;
-        position: absolute;
-        top: 80px;
-    }
-    @keyframes fly-rocket {
+    @keyframes opacc {
         0% {
-            margin-top: 100%;
-            margin-left: 40%;
-        }
-        20% {
-            margin-left: 5%;
-        }
-        40% {
-            margin-left: 25%;
-        }
-        60% {
-            margin-left: 1%;
-        }
-        80% {
-            margin-left: 10%;
+            opacity: 0.1
         }
         100% {
-            margin-top: 0%;
+            opacity: 1
         }
     }
     &__p {
         background-image: linear-gradient(to right bottom, #2ed8b2, #00c7cd, #00b3e4, #009aed, #1e7ce1);
         font-size: 2.9em;
-        animation: slideinP 2s, rotateP 1s 2;
-    }
-    @keyframes rotateP {
-        from {
-            transform: rotate(0deg);
-        }
-        to {
-            transform: rotate(360deg);
-        }
     }
     &__i {
         font-size: 2.5em;
-        animation: slideinI 2s, rotateP 1.5s 2;
-    }
-    @keyframes slideinI {
-        from {
-            margin-bottom: 100%;
+        position: relative;
+        .fas {
+            transform: rotate(-135deg);
+            @include bg-image-gradient-blue;
+            background-image: linear-gradient(to right top, #ff0016, #fe003d, #f6005b, #e80074, #d52789);
+            animation: fly-rocket 4s, rotate-rocket 5s 1;
+            font-size: 0.2em;
+            position: absolute;
+            top: 20px;
         }
-        to {
-            margin-bottom: 0%;
+        @keyframes fly-rocket {
+            0% {
+                margin-top: 600%;
+                margin-left: 600%;
+            }
+            20% {
+                margin-left: 5%;
+            }
+            40% {
+                margin-left: 25%;
+            }
+            60% {
+                margin-left: 1%;
+            }
+            80% {
+                margin-left: 10%;
+            }
+            100% {
+                margin-top: 0%;
+            }
         }
     }
     &__o {
         font-size: 2.3em;
-        animation: slideinO 2s, rotateP 2s 2;
-    }
-    @keyframes slideinO {
-        from {
-            margin-top: 100%;
-        }
-        to {
-            margin-top: 0%;
-        }
     }
     &__t {
         font-size: 2em;
-        animation: slideinT 2s, rotateP 2.5s 2;
-    }
-    @keyframes slideinT {
-        from {
-            margin-bottom: 80%;
-        }
-        to {
-            margin-bottom: 0%;
-        }
     }
     &__r {
         font-size: 1.9em;
-        animation: slideinR 2s, rotateP 3s 2;
         &--last {
             font-size: 0.5em;
-            animation: slideinRL 2s, rotateP 6.5s 2;
-            ;
-        }
-    }
-    @keyframes slideinR {
-        from {
-            margin-top: 90%;
-        }
-        to {
-            margin-top: 0%;
-        }
-    }
-    @keyframes slideinRL {
-        from {
-            margin-left: 70%;
-        }
-        to {
-            margin-left: 0%;
         }
     }
     &__g {
         font-size: 1.7em;
-        animation: slideinG 2s, rotateP 3.5s 2;
-    }
-    @keyframes slideinG {
-        from {
-            margin-bottom: 70%;
-        }
-        to {
-            margin-bottom: 0%;
-        }
     }
     &__l {
         font-size: 1.5em;
-        animation: slideinL 2s, rotateP 4s 2;
-    }
-    @keyframes slideinL {
-        from {
-            margin-top: 85%;
-        }
-        to {
-            margin-top: 0%;
-        }
     }
     &__e {
         font-size: 1.3em;
-        animation: slideinE 2s, rotateP 4.5s 2;
         &--second {
             font-size: 0.7em;
-            animation: slideinES 2s, rotateP 6s 2;
-        }
-    }
-    @keyframes slideinES {
-        from {
-            margin-bottom: 100%;
-        }
-        to {
-            margin-bottom: 0%;
-        }
-    }
-    @keyframes slideinE {
-        from {
-            margin-top: 100%;
-        }
-        to {
-            margin-top: 0%;
         }
     }
     &__j {
-        animation: slideinJ 2s, rotateP 5s 2;
-    }
-    @keyframes slideinJ {
-        from {
-            margin-right: 70%;
-        }
-        to {
-            margin-right: 0%;
-        }
+        font-size: 1.1em;
     }
     &__z {
         font-size: 0.9em;
-        animation: slideinZ 2s, rotateP 5.5s 2;
-        ;
-    }
-    @keyframes slideinZ {
-        from {
-            margin-left: 30%;
-        }
-        to {
-            margin-left: 0%;
-        }
     }
 }
 
@@ -235,6 +133,7 @@ html {
         letter-spacing: 0.12em;
         text-transform: uppercase;
         padding: 15px;
+        margin: 30px;
         font-size: 1.2em;
         border: none;
         box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.9);
