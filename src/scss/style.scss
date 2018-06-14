@@ -25,6 +25,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     letter-spacing: 0.2em;
     animation: myMoveTo 1.1s;
     &__p,
@@ -240,12 +241,13 @@ html {
         @include bg-image-padding-gradient();
         animation: border-change-in 4s alternate;
         border-radius: 236px 550px 220px 550px / 550px 241px 550px 243px;
-        &:focus,&:active {
+        &:focus,
+        &:active {
             animation: border-change-out 0.7s;
             animation-fill-mode: both;
             transition: box-shadow 0.3s ease-in-out;
         }
-        &:hover{
+        &:hover {
             background: linear-gradient(to right top, #2ed8b2, #00bcc9, #009ccd, #317ab9, #615691);
         }
     }
@@ -277,22 +279,16 @@ html {
 
 @media (max-width:725px) {
     .text {
-        transform: scale(0.7);
-        .fas{
+        .fas {
             top: 20px;
         }
     }
 }
 
-
 @media (max-width:525px) {
-    .text{
-        transform: scale(0.5);
-    }
+    .text {}
 }
 
 @media (max-width:390px) {
-    .text{
-        transform: scale(0.4);
-    }
+    .text {}
 }
